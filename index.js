@@ -69,19 +69,19 @@ app.post('/mailer',function(req , res){
             port: 465,
             secure: true, // true for 465, false for other ports
             auth: {
-                user: 'craftstores1982@gmail.com', // generated ethereal user
-                pass: 'abhinav000' // generated ethereal password
+                user: 'hemantkashyap1995@gmail.com', // generated ethereal user
+                pass: '9690347870vandna' // generated ethereal password
+
             }
         });
     let mailOptions = {
-        from: '"User Query 👻" <craftstores1982@gmail.com>', // sender address
+        from: '"User Query 👻" <hemantkashyap1995@gmail.com>', // sender address
         to: 'tourmyuk@gmail.com', // list of receivers
         subject: 'Hello ✔', // Subject line
         // text: 'Hello world?', // plain text body
         html: "<body><span>Query Detail</sapn><br /><br /> <b>Name :</b>"+req.body.data.name+"<br /> <b>Email :</b>"+req.body.data.email+"<br /> <b>Contact : </b>"+req.body.data.phone+"<br /> <b>Tour Package : </b>"+req.body.data.SP+"<br /><b>Tour Package : </b>"+req.body.data.SB+"<br /><b>No. of Adults :</b>"+req.body.data.adults+"<br /><b>No of Children :</b>"+req.body.data.children+"<br /><b>Travelling Date : </b>"+req.body.data.date+"<br /><b>Message:</b>"+req.body.data.message+"</body>"
     };
     transporter.sendMail(mailOptions, (error, info) => {
-        // console.log(error)
         if (error) {
             res.json({
                 code : 400,
