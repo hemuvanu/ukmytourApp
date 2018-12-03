@@ -79,7 +79,7 @@ app.post('/mailer',function(req , res){
         to: 'tourmyuk@gmail.com', // list of receivers
         subject: 'Hello ✔', // Subject line
         // text: 'Hello world?', // plain text body
-        html: "<body><span>Query Detail</sapn><br /><br /> <b>Name :</b>"+req.body.data.name+"<br /> <b>Email :</b>"+req.body.data.email+"<br /> <b>Contact : </b>"+req.body.data.phone+"<br /> <b>Tour Package : </b>"+req.body.data.SP+"<br /><b>Tour Package : </b>"+req.body.data.SB+"<br /><b>No. of Adults :</b>"+req.body.data.adults+"<br /><b>No of Children :</b>"+req.body.data.children+"<br /><b>Travelling Date : </b>"+req.body.data.date+"<br /><b>Message:</b>"+req.body.data.message+"</body>"
+        html: "<body><span>Query Detail</sapn><br /><br /> <b>Name :</b>"+req.body.data.name+"<br /> <b>Email :</b>"+req.body.data.email+"<br /> <b>Contact : </b>"+req.body.data.phone+"<br /> <b>No. of Adults :</b>"+req.body.data.adults+"<br /><b>No of Children :</b>"+req.body.data.children+"<br /><b>Travelling Date : </b>"+req.body.data.date+"<br /><b>Message:</b>"+req.body.data.message+"</body>"
     };
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
