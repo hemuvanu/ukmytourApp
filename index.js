@@ -69,14 +69,15 @@ app.post('/mailer',function(req , res){
             port: 465,
             secure: true, // true for 465, false for other ports
             auth: {
-                user: 'hemantkashyap1995@gmail.com', // generated ethereal user
-                pass: '9690347870vandna' // generated ethereal password
+                user:'hemantkashyap1995@gmail.com',
+                pass:'9690347870vandna' // generated ethereal password
 
             }
         });
     let mailOptions = {
         from: '"User Query 👻" <hemantkashyap1995@gmail.com>', // sender address
         to: 'tourmyuk@gmail.com', // list of receivers
+        // to:'tourmyuk@gmail.com',
         subject: 'Hello ✔', // Subject line
         // text: 'Hello world?', // plain text body
         html: "<body><span>Query Detail</sapn><br /><br /> <b>Name :</b>"+req.body.data.name+"<br /> <b>Email :</b>"+req.body.data.email+"<br /> <b>Contact : </b>"+req.body.data.phone+"<br /> <b>No. of Adults :</b>"+req.body.data.adults+"<br /><b>No of Children :</b>"+req.body.data.children+"<br /><b>Travelling Date : </b>"+req.body.data.date+"<br /><b>Message:</b>"+req.body.data.message+"</body>"
